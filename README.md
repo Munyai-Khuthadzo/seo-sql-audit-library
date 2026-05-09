@@ -3,7 +3,7 @@
 Reusable SQL queries for technical SEO audits 
 using Screaming Frog crawl data imported into MySQL.
 
-Built by Khuthadzo — Technical SEO Specialist | 
+Built by Munyai Khuthadzo — Technical SEO Specialist | 
 SQL + SEO Data Pipeline
 
 ---
@@ -30,7 +30,6 @@ thousands of pages in seconds.
 | Master Overview | 1 | Full audit snapshot |
 
 ---
-
 ## How To Use
 
 **Step 1 — Crawl your target website**
@@ -91,6 +90,19 @@ Applied to mtgfunerals.co.za (Venda, Limpopo):
 - Screaming Frog SEO Spider (free up to 500 URLs)
 
 ---
+
+## Enterprise Audit Queries (seo_audit_library.sql)
+Audit queries designed for high-volume websites (50,000+ pages) covering orphan page detection,
+template-level performance diagnosis and automated noindex monitoring.
+
+### 1. Orphan Page Detection
+Identifies indexable URLs that exist in the sitemap but have zero internal links pointing to them.
+
+### 2. Template-Level LCP Diagnosis
+Proves whether poor Largest Contentful Paint scores are a template-level issue or individual page errors, and identifies the specific resource causing the problem.
+
+### 3. Noindex Canary Check
+Monitors the percentage of pages carrying a noindex directive to detect accidental deployments before they impact organic rankings.
 
 ## Author
 
