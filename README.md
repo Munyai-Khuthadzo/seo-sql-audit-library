@@ -104,6 +104,23 @@ Proves whether poor Largest Contentful Paint scores are a template-level issue o
 ### 3. Noindex Canary Check
 Monitors the percentage of pages carrying a noindex directive to detect accidental deployments before they impact organic rankings.
 
+## Ahrefs Data-Cleaning Pipeline
+
+The data-cleaning workflow standardizes, refines, and deduplicates raw SEO data exported from Ahrefs to ensure it is structured correctly for accurate analytics and reporting.
+The pipeline addresses critical data integrity issues through the following strategic steps:
+
+### Intelligent Deduplication:
+Identifies and isolates unique keyword records across matching dimensions (Keyword, Country, Intent, Device), systematically keeping the records with the most complete metrics while eliminating redundant rows.
+
+### Case Uniformity: 
+Normalizes all text and URL inputs to lowercase, preventing reporting tools from fragmenting data due to mismatched capitalization (e.g., treating "SEO" and "seo" as distinct categories).
+
+### Type Standardization & Value Cleansing:
+Strips out uncalculable text strings (such as "unknown", "high", "N/A", and "missing") and hidden spaces from numeric metrics. By converting these to proper SQL NULL values, the dataset is cleared of corrupting elements, enabling error-free mathematical aggregations like averages, sums, and distributions.
+
+### Time-Series Normalization:
+Transforms non-standard string dates into standard SQL format, a required step for accurate chronological sorting, date-range filtering, and trend forecasting. Business & Analytical Value By executing this workflow, the dataset shifts from an unreliable raw export to a pristine, production-ready table. This guarantees that any downstream dashboards, performance tracking tools, or ROI calculations are built on uniform, accurate, and structurally sound data.
+
 ## Author
 
 **Munyai Khuthadzo**
